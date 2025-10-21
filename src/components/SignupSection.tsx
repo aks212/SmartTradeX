@@ -15,6 +15,7 @@ const SignupSection = () => {
 
   return (
     <section 
+      id="signup"
       className="py-24 relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, hsl(357 76% 48%), hsl(41 67% 69%))',

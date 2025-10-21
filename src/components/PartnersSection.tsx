@@ -8,7 +8,7 @@ const partners = [
 
 const PartnersSection = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section id="partners" className="py-24 bg-background relative overflow-hidden">
       {/* Top gold divider */}
       <div className="absolute top-0 left-0 right-0 h-1 gradient-gold"></div>
       

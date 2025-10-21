@@ -3,7 +3,7 @@ import aboutImage from "@/assets/about-image.jpg";
 
 const AboutSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Text Content */}

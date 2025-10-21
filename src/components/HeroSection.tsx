@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 const HeroSection = () => {
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(217, 28, 35, 0.9), rgba(229, 192, 123, 0.8)), url(${heroBackground})`,
         backgroundSize: 'cover',
@@ -15,19 +15,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)] animate-pulse opacity-20"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        {/* Logo Header */}
-        <div className="absolute top-8 left-0 right-0 flex justify-between items-center px-6">
-          <div className="flex items-center gap-8">
-            <div className="text-white font-heading font-bold text-xl">SmartTradeX</div>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="text-white/90 text-sm font-medium">Powered by Zenith Bank</div>
-            <div className="text-white/90 text-sm font-medium">Nexus X Industries Ltd</div>
-          </div>
-        </div>
 
         {/* Hero Content */}
-        <div className="max-w-4xl mx-auto text-center pt-20 animate-fade-in">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="glass-effect rounded-3xl p-12 shadow-2xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">
               Empowering Nigeria's SMEs to Trade, Learn & Grow Globally
