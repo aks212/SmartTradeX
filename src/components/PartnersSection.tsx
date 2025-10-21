@@ -1,6 +1,9 @@
+import zenithLogo from "@/assets/zenith-logo.png";
+import nexusLogo from "@/assets/nexus-logo.png";
+
 const partners = [
-  { name: "Zenith Bank", placeholder: true },
-  { name: "Nexus X Industries Ltd", placeholder: true },
+  { name: "Zenith Bank", logo: zenithLogo },
+  { name: "Nexus X Industries Ltd", logo: nexusLogo },
   { name: "NEPC", placeholder: true },
   { name: "NEXIM Bank", placeholder: true },
   { name: "AfCFTA Secretariat", placeholder: true },
@@ -30,15 +33,23 @@ const PartnersSection = () => {
           {partners.map((partner, index) => (
             <div 
               key={index}
-              className="flex items-center justify-center p-8 rounded-xl bg-secondary/50 hover:bg-white hover:shadow-gold transition-all duration-300 group animate-fade-in"
+              className="flex items-center justify-center p-8 rounded-xl bg-white hover:shadow-gold transition-all duration-300 group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-3 rounded-full bg-muted flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
-                  <span className="text-3xl font-heading font-bold text-muted-foreground group-hover:text-accent-foreground">
-                    {partner.name.substring(0, 2)}
-                  </span>
-                </div>
+              <div className="text-center w-full">
+                {partner.logo ? (
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name} 
+                    className="w-full h-20 object-contain mx-auto mb-3 opacity-70 group-hover:opacity-100 transition-opacity"
+                  />
+                ) : (
+                  <div className="w-24 h-24 mx-auto mb-3 rounded-full bg-muted flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
+                    <span className="text-3xl font-heading font-bold text-muted-foreground group-hover:text-accent-foreground">
+                      {partner.name.substring(0, 2)}
+                    </span>
+                  </div>
+                )}
                 <p className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                   {partner.name}
                 </p>

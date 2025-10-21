@@ -2,8 +2,16 @@ import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section 
+      id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
       style={{
         backgroundImage: `linear-gradient(135deg, rgba(217, 28, 35, 0.9), rgba(229, 192, 123, 0.8)), url(${heroBackground})`,
@@ -26,10 +34,20 @@ const HeroSection = () => {
               SmartTradeX is the all-in-one ecosystem that helps African small businesses access trade finance, verified buyers, and export knowledge — powered by Zenith Bank.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="gold" size="lg" className="w-full sm:w-auto">
+              <Button 
+                variant="gold" 
+                size="lg" 
+                className="w-full sm:w-auto"
+                onClick={() => scrollToSection("signup")}
+              >
                 Join Pilot Launch
               </Button>
-              <Button variant="hero" size="lg" className="w-full sm:w-auto">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="w-full sm:w-auto"
+                onClick={() => scrollToSection("about")}
+              >
                 Learn More
               </Button>
             </div>

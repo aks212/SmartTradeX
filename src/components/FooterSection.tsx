@@ -95,15 +95,6 @@ const FooterSection = () => {
             "Connecting African SMEs to the World — Powered by Zenith."
           </p>
         </div>
-
-        {/* QR Code placeholder */}
-        <div className="mt-8 text-center">
-          <div className="inline-block p-4 bg-white rounded-xl">
-            <div className="w-32 h-32 bg-muted flex items-center justify-center">
-              <span className="text-xs text-muted-foreground text-center px-2">Scan to Join Pilot</span>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );

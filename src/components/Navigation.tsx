@@ -35,11 +35,17 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Left: Main Logo */}
           <div className="flex items-center gap-3">
-            <img src={smarttradexLogo} alt="SmartTradeX" className="h-10 md:h-12" />
+            <img src={smarttradexLogo} alt="SmartTradeX" className="h-14 md:h-16" />
           </div>
 
           {/* Center: Navigation Links (Desktop) */}
           <div className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors"
+            >
+              Home
+            </button>
             <button
               onClick={() => scrollToSection("about")}
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
@@ -64,6 +70,12 @@ const Navigation = () => {
             >
               Join Pilot
             </button>
+            <a
+              href="/contact"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors"
+            >
+              Contact Us
+            </a>
           </div>
 
           {/* Right: Partner Logos & CTA */}
@@ -94,6 +106,12 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
             <button
+              onClick={() => scrollToSection("home")}
+              className="block w-full text-left py-2 text-foreground/80 hover:text-foreground font-medium transition-colors"
+            >
+              Home
+            </button>
+            <button
               onClick={() => scrollToSection("about")}
               className="block w-full text-left py-2 text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
@@ -117,6 +135,12 @@ const Navigation = () => {
             >
               Join Pilot
             </button>
+            <a
+              href="/contact"
+              className="block w-full text-left py-2 text-foreground/80 hover:text-foreground font-medium transition-colors"
+            >
+              Contact Us
+            </a>
             <div className="flex items-center gap-4 pt-4 border-t border-border">
               <img src={zenithLogo} alt="Zenith Bank" className="h-6" />
               <img src={nexusLogo} alt="Nexus X Industries" className="h-6" />
