@@ -35,7 +35,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Left: Main Logo */}
           <div className="flex items-center gap-3">
-            <img src={smarttradexLogo} alt="SmartTradeX" className="h-14 md:h-16" />
+            <img src={smarttradexLogo} alt="SmartTradeX" className="h-20 md:h-24" />
           </div>
 
           {/* Center: Navigation Links (Desktop) */}
