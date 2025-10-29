@@ -42,6 +42,8 @@ const PartnersSection = () => {
                     src={partner.logo} 
                     alt={partner.name} 
                     className="w-full h-14 sm:h-16 md:h-20 object-contain mx-auto mb-2 sm:mb-3 opacity-70 group-hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-2 sm:mb-3 rounded-full bg-muted flex items-center justify-center group-hover:bg-accent transition-colors duration-300">

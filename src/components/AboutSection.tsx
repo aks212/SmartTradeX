@@ -32,6 +32,8 @@ const AboutSection = () => {
                 src={aboutImage} 
                 alt="African SME business owner working on digital platform"
                 className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>

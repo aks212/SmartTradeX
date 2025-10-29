@@ -1,11 +1,14 @@
+import { lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
 import FloatingSocial from "@/components/FloatingSocial";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import PartnersSection from "@/components/PartnersSection";
-import SignupSection from "@/components/SignupSection";
-import FooterSection from "@/components/FooterSection";
+
+// Lazy load below-the-fold components
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const FeaturesSection = lazy(() => import("@/components/FeaturesSection"));
+const PartnersSection = lazy(() => import("@/components/PartnersSection"));
+const SignupSection = lazy(() => import("@/components/SignupSection"));
+const FooterSection = lazy(() => import("@/components/FooterSection"));
 
 const Index = () => {
   return (
@@ -13,11 +16,13 @@ const Index = () => {
       <Navigation />
       <FloatingSocial />
       <HeroSection />
-      <AboutSection />
-      <FeaturesSection />
-      <PartnersSection />
-      <SignupSection />
-      <FooterSection />
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <AboutSection />
+        <FeaturesSection />
+        <PartnersSection />
+        <SignupSection />
+        <FooterSection />
+      </Suspense>
     </div>
   );
 };

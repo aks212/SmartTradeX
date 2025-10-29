@@ -35,7 +35,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Left: Main Logo */}
           <div className="flex items-center gap-3">
-            <img src={smarttradexLogo} alt="SmartTradeX" className="h-20 md:h-24" />
+            <img 
+              src={smarttradexLogo} 
+              alt="SmartTradeX" 
+              className="h-20 md:h-24"
+              loading="eager"
+              decoding="async"
+            />
           </div>
 
           {/* Center: Navigation Links (Desktop) */}
@@ -81,8 +87,20 @@ const Navigation = () => {
           {/* Right: Partner Logos & CTA */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-4 pr-6 border-r border-border">
-              <img src={zenithLogo} alt="Zenith Bank" className="h-8 opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={nexusLogo} alt="Nexus X Industries" className="h-8 opacity-80 hover:opacity-100 transition-opacity" />
+              <img 
+                src={zenithLogo} 
+                alt="Zenith Bank" 
+                className="h-8 opacity-80 hover:opacity-100 transition-opacity"
+                loading="eager"
+                decoding="async"
+              />
+              <img 
+                src={nexusLogo} 
+                alt="Nexus X Industries" 
+                className="h-8 opacity-80 hover:opacity-100 transition-opacity"
+                loading="eager"
+                decoding="async"
+              />
             </div>
             <Button
               variant="gold"
@@ -142,8 +160,20 @@ const Navigation = () => {
               Contact Us
             </a>
             <div className="flex items-center gap-4 pt-4 border-t border-border">
-              <img src={zenithLogo} alt="Zenith Bank" className="h-6" />
-              <img src={nexusLogo} alt="Nexus X Industries" className="h-6" />
+              <img 
+                src={zenithLogo} 
+                alt="Zenith Bank" 
+                className="h-6"
+                loading="lazy"
+                decoding="async"
+              />
+              <img 
+                src={nexusLogo} 
+                alt="Nexus X Industries" 
+                className="h-6"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <Button
               variant="gold"
