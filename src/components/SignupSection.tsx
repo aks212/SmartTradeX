@@ -16,26 +16,26 @@ const SignupSection = () => {
   return (
     <section 
       id="signup"
-      className="py-24 relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-24 relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, hsl(357 76% 48%), hsl(41 67% 69%))',
       }}
     >
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-2xl mx-auto">
           {/* Card with form */}
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl animate-fade-up">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-charcoal mb-4">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl animate-fade-up">
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-charcoal mb-3 sm:mb-4">
                 Get Early Access to SmartTradeX
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 Join the first 1,000 SMEs to experience AI-powered trade and financing through Zenith Bank's infrastructure.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="fullName">Full Name *</Label>
                   <Input id="fullName" required placeholder="Enter your full name" />
@@ -46,7 +46,7 @@ const SignupSection = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address *</Label>
                   <Input id="email" type="email" required placeholder="your@email.com" />
@@ -57,7 +57,7 @@ const SignupSection = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="sector">Sector / Industry *</Label>
                   <Input id="sector" required placeholder="e.g., Agriculture, Tech" />
